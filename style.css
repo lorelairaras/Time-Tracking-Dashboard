@@ -1,0 +1,28 @@
+:root {
+  --Purple600: hsl(246, 80%, 60%);
+  --Orange300: hsl(15, 100%, 70%);
+  --Blue300: hsl(195, 74%, 62%);
+  --Pink400: hsl(348, 100%, 68%);
+  --Green400: hsl(145, 58%, 55%);
+  --Purple700: hsl(264, 64%, 52%);
+  --Yellow300: hsl(43, 84%, 65%);
+  --Purple500: hsl(235, 45%, 61%);
+  --Navy950: hsl(226, 43%, 10%);
+  --Navy900: hsl(235, 46%, 20%);
+  --Navy200: hsl(236, 100%, 87%);
+  --fontsize: 18px;
+  --weights300: 300;
+  --weights400: 400;
+  --weights500: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* Desktop Styles */
