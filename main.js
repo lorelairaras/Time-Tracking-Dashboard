@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const timeframeBtns = document.querySelectorAll(".timeframe-btn");
   const activityCards = document.querySelectorAll(".activity-card");
 
+  activityCards.forEach((card) => {
+    card.querySelector(".current-hours").textContent = "--hrs";
+    card.querySelector(".previous-hours").textContent = "Loading...";
+  });
+
   // Fetch data from data.json
   fetch("data.json")
     .then((response) => {
@@ -19,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
           this.classList.add("active");
 
           const timeframe = this.dataset.timeframe;
-
           updateTimeCards(data, timeframe);
         });
       });
@@ -36,7 +40,44 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         },
         {
-          //I WILL CONTINUE
+          title: "Play",
+          timeframes: {
+            daily: { current: 1, previous: 2 },
+            weekly: { current: 10, previous: 8 },
+            monthly: { current: 23, previous: 29 },
+          },
+        },
+        {
+          title: "Study",
+          timeframes: {
+            daily: { current: 0, previous: 1 },
+            weekly: { current: 4, previous: 7 },
+            monthly: { current: 13, previous: 19 },
+          },
+        },
+        {
+          title: "Exercise",
+          timeframes: {
+            daily: { current: 1, previous: 1 },
+            weekly: { current: 4, previous: 5 },
+            monthly: { current: 11, previous: 18 },
+          },
+        },
+        {
+          title: "Social",
+          timeframes: {
+            daily: { current: 1, previous: 3 },
+            weekly: { current: 5, previous: 10 },
+            monthly: { current: 21, previous: 23 },
+          },
+        },
+        {
+          title: "Self Care",
+          timeframes: {
+            daily: { current: 0, previous: 1 },
+            weekly: { current: 2, previous: 2 },
+            monthly: { current: 7, previous: 11 },
+          },
         },
       ];
       updateTimeCards(fallbackData, "weekly");
