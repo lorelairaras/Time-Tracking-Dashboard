@@ -223,10 +223,6 @@ body {
   padding-top: 2.25rem;
 }
 
-.card-content {
-  padding: 1.5rem;
-}
-
 @media (min-width: 768px) {
   .dashboard-container {
     display: grid;
@@ -244,7 +240,6 @@ body {
     align-items: flex-start;
     gap: 2.5rem;
     padding-bottom: 5rem;
-    padding: 2rem;
   }
 
   .profile-name {
